@@ -51,7 +51,7 @@ int main() {
 
             
             if (cekkiri && cekkanan) {
-                arr[i] = (int) floor ((kiri + kanan) / 2); 
+                arr[i] = ((kiri + kanan) / 2); 
             } else if (cekkiri) {
                 arr[i] = kiri;
             } else if (cekkanan) {
