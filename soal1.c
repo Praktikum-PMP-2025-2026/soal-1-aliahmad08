@@ -9,15 +9,15 @@
  *
  * 
  */
-
 #include <stdio.h>
 #include <math.h>
 
 int main() {
     int n;
     
+    
     if (scanf("%d", &n) != 1) {
-        return (n);
+        return 1;
     }
 
     int arr[n];
@@ -40,7 +40,7 @@ int main() {
                 }
             }
 
-            for (int m = i + 1; i < n ; m++) {
+            for (int m = i + 1; m < n; m++) {
                 if (arr[m] != -1) {
                     kanan = arr[m];
                     cekkanan = 1;
@@ -49,11 +49,11 @@ int main() {
             }
 
             
-            if (cekkiri == 1 && cekkanan == 1) {
-                arr[i] = (int)floor((kiri + kanan) / 2); 
-            } else if (cekkiri == 1) {
+            if (cekkiri && cekkanan) {
+                arr[i] = (int)floor((kiri + kanan) / 2.0); 
+            } else if (cekkiri) {
                 arr[i] = kiri;
-            } else if (cekkanan == 1) {
+            } else if (cekkanan) {
                 arr[i] = kanan;
             } else {
                 arr[i] = 0;
@@ -61,6 +61,7 @@ int main() {
         }
     }
 
+    
     printf("RECOVERED");
     for (int i = 0; i < n; i++) {
         printf(" %d", arr[i]);
@@ -75,12 +76,15 @@ int main() {
             max = max + arr[i];
         } else {
             max = arr[i];
-        }  
+        }
+
+        
         if (max > totalmax) {
             totalmax = max;
         }
     }
 
     printf("MAX_SUM %d\n", totalmax);
+
     return 0;
 }
