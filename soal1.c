@@ -50,7 +50,7 @@ int main() {
 
             
             if (cekkiri == 1 && cekkanan == 1) {
-                arr[i] = (int)floor((kiri + kanan) / 2.0); 
+                arr[i] = (int)floor((kiri + kanan) / 2); 
             } else if (cekkiri == 1) {
                 arr[i] = kiri;
             } else if (cekkanan == 1) {
@@ -65,11 +65,10 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf(" %d", arr[i]);
     }
-    printf("\n");
 
 
-    long int totalmax = arr[0];
-    long int  max = arr[0];
+    int totalmax = arr[0];
+    int  max = arr[0];
 
     for (int i = 1; i < n; i++) {
         if (max + arr[i] > arr[i]) {
@@ -82,6 +81,6 @@ int main() {
         }
     }
 
-    printf("MAX_SUM %lld\n", totalmax);
+    printf("MAX_SUM %d\n", totalmax);
     return 0;
 }
