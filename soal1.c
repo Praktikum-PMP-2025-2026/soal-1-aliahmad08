@@ -9,6 +9,7 @@
  *
  * 
  */
+
 #include <stdio.h>
 #include <math.h>
 
@@ -50,7 +51,7 @@ int main() {
 
             
             if (cekkiri && cekkanan) {
-                arr[i] = (int)floor((kiri + kanan) / 2.0); 
+                arr[i] = (int) floor ((kiri + kanan) / 2); 
             } else if (cekkiri) {
                 arr[i] = kiri;
             } else if (cekkanan) {
