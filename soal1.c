@@ -84,7 +84,7 @@ int main() {
         }
     }
 
-    printf("MAX_SUM %d\n", totalmax);
+    printf("MAX_SUM %d", totalmax);
 
     return 0;
 }
